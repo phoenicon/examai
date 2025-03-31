@@ -1,0 +1,79 @@
+/* Mobile styles for Psychology Revision System */
+
+@media (max-width: 768px) {
+  /* Layout adjustments */
+  main {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  
+  aside {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Component adjustments */
+  .topic-resources {
+    flex-direction: column;
+  }
+  
+  .resource-section {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .sample-answer-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .sample-answer-details button {
+    margin-top: 0.5rem;
+  }
+  
+  /* Form elements */
+  button, input, select {
+    font-size: 1rem; /* Larger touch targets */
+    padding: 0.7rem 1rem;
+  }
+  
+  .difficulty-selector label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Text adjustments */
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  header {
+    padding: 0.8rem;
+  }
+  
+  #sessionControls {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #sessionControls button {
+    margin-top: 0.5rem;
+  }
+  
+  #sessionStatus {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}

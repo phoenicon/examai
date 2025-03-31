@@ -1,0 +1,327 @@
+/* Main styles for Psychology Revision System */
+
+/* Base styles */
+:root {
+  --primary-color: #4a6fa5;
+  --secondary-color: #6b8cae;
+  --accent-color: #ff7e5f;
+  --text-color: #333;
+  --bg-color: #f9f9f9;
+  --card-color: #fff;
+  --border-color: #ddd;
+  --success-color: #4caf50;
+  --error-color: #f44336;
+  --warning-color: #ff9800;
+}
+
+/* Dark mode variables */
+.dark-mode {
+  --text-color: #f0f0f0;
+  --bg-color: #222;
+  --card-color: #333;
+  --border-color: #444;
+  --primary-color: #6889b9;
+  --secondary-color: #7fa3c7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Text size classes */
+.text-small {
+  font-size: 0.9rem;
+}
+
+.text-medium {
+  font-size: 1rem;
+}
+
+.text-large {
+  font-size: 1.2rem;
+}
+
+/* Layout */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+aside {
+  width: 300px;
+  padding-right: 2rem;
+}
+
+#content {
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  color: white;
+  margin-top: 2rem;
+}
+
+/* Components */
+.sidebar-section {
+  background-color: var(--card-color);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.setting-group {
+  margin-bottom: 1.5rem;
+}
+
+.setting-group h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.setting-option {
+  margin: 0.7rem 0;
+}
+
+#sessionControls {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+#sessionControls.active {
+  background-color: rgba(76, 175, 80, 0.2);
+}
+
+#sessionStatus {
+  margin-right: 1rem;
+}
+
+#sessionSummary {
+  background-color: var(--card-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.topic-selection {
+  margin-bottom: 2rem;
+}
+
+.topic-resources {
+  display: flex;
+  margin: 1.5rem 0;
+}
+
+.resource-section {
+  flex: 1;
+  padding: 1rem;
+  background-color: var(--card-color);
+  margin-right: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.resource-section:last-child {
+  margin-right: 0;
+}
+
+.topic-tips {
+  background-color: var(--card-color);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.question-generator {
+  background-color: var(--card-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.difficulty-selector {
+  margin: 1rem 0;
+}
+
+.difficulty-selector label {
+  margin-right: 1.5rem;
+}
+
+#questionDisplay, #answerArea, #evaluationArea {
+  background-color: var(--card-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.answer-section {
+  margin-bottom: 1.5rem;
+}
+
+.section-instructions {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.word-count {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  resize: vertical;
+}
+
+.answer-actions {
+  margin-top: 1.5rem;
+}
+
+.sample-answers {
+  background-color: var(--card-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sample-answer {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sample-answer:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.sample-answer-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.8rem 0;
+}
+
+.sample-answer-content {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  border-radius: 4px;
+}
+
+.answer-text {
+  margin-bottom: 1rem;
+}
+
+.answer-feedback {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.eval-score {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: rgba(74, 111, 165, 0.1);
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.eval-point {
+  margin-bottom: 1rem;
+}
+
+/* Form elements */
+select, button, input[type="email"], input[type="password"] {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--card-color);
+  color: var(--text-color);
+}
+
+select, input[type="email"], input[type="password"] {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border: none;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* Status indicators */
+.status-unknown, .status-connected, .status-error {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+
+.status-unknown {
+  background-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.status-connected {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.status-error {
+  background-color: var(--error-color);
+  color: white;
+}
